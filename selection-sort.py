@@ -1,17 +1,17 @@
-
 class Solution: 
     def select(self, arr, i):
-        # code here 
-        for i in range(i,len(arr)):
-            for j in range(i+1, len(A)):
-                if A[i] > A[j]:
-                 i = j
-                 A[i], A[i] = A[i], A[i]
-    
-    def selectionSort(self, arr,n):
-        #code here
-         for k in range(n-1):
-            for j in range(k+1, n):
-                if arr[k] > arr[j]:
-                    arr[k], arr[j] = arr[j], arr[k]
-         return arr
+        # code here
+        min = i
+        for j in range(i + 1, len(arr)):
+            if (arr[j] < arr[min]):
+                min = j
+        return min
+
+    def selectionSort(self, arr, n):
+        # code here
+        for j in range(n):
+            min = self.select(arr, j)
+            if min != j:
+                temp = arr[min]
+                arr[min] = arr[j]
+                arr[j] = temp
