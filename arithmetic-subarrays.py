@@ -10,4 +10,4 @@ class Solution:
                 if x-y != val:
                     flag = False
             ans.append(flag)
-        return ans
+        return   ans
