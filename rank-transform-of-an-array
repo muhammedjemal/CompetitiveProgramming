@@ -1,0 +1,7 @@
+from typing import List
+
+class Solution:
+    def arrayRankTransform(self, arr: List[int]) -> List[int]:
+        sorted_arr = sorted(set(arr))
+        rank_map = {val: rank for rank, val in enumerate(sorted_arr, start=1)}
+        return [rank_map[val] for val in arr]
