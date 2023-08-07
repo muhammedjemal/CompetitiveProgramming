@@ -28,4 +28,4 @@ class Solution:
                     j += 1
                     k -= 1
                     
-        return result % constant
+        return  result % constant
